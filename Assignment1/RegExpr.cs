@@ -6,8 +6,8 @@ public static class RegExpr
 {
     public static IEnumerable<string> SplitLine(IEnumerable<string> lines)
     {
-        var splitPattern = @"[^\w\d]";
-        var matchPattern = @"[\w*\d*]";
+        var splitPattern = @"\W";
+        var matchPattern = @"[\w*]";
 
         foreach (var s in lines)
         {
