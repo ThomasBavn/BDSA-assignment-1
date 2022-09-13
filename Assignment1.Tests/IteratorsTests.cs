@@ -4,7 +4,7 @@ namespace Assignment1.Tests;
 public class IteratorsTests
 {
 
-    [Fact]
+    /*[Fact]
     public void Flatten_EmptyList_ReturnsEmptyList()
     {
         // Arrange
@@ -41,7 +41,7 @@ public class IteratorsTests
 
         // Assert
         Assert.Equal(new[] { 1, 2, 3, 4, 5, 6, 7, 8 }, result);
-    }
+    }*/
 
     [Fact]
     public void Filter_EmptyList_ReturnsEmptyList()
