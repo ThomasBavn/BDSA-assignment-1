@@ -36,7 +36,7 @@ public class RegExprTests
     public void Resolution_Given_String_Of_Resolutions_Returns_Stream_Of_Resolutions()
     {
         // Arrange
-        var input = "1920x1080, 1024x768, 800x600, 640x480, 320x200, 320x240, 800x600, 1280x960";
+        var input = new[] { "1920x1080, 1024x768, 800x600, 640x480, 320x200, 320x240, 800x600, 1280x960"} ;
 
         var expected = new[] { (1920, 1080), (1024, 768), (800, 600), (640, 480), (320, 200), (320, 240), (800, 600), (1280, 960) };
 
@@ -51,7 +51,7 @@ public class RegExprTests
     public void Resolution_Given_Empty_String_Of_Resolutions_Returns_Empty_Stream_Of_Resolutions()
     {
         // Arrange
-        var input = "";
+        var input = Array.Empty<string>();
 
         var expected = Array.Empty<(int width, int height)>();
 

@@ -21,14 +21,11 @@ public static class RegExpr
         }
     }
 
-    public static IEnumerable<(int width, int height)> Resolution(string resolutions)
+    public static IEnumerable<(int width, int height)> Resolution(IEnumerable<string> resolutions)
     {
-        var splitPattern = @"[^\w\d]";
         var matchPattern = @"((?<width>\d+)x(?<height>\d+))";
 
-        var splittedResolutions = Regex.Split(resolutions, splitPattern);
-
-        foreach (var res in splittedResolutions)
+        foreach (var res in resolutions)
         {
             foreach (Match match in Regex.Matches(res, matchPattern))
             {
